@@ -4,7 +4,7 @@ For this project, I had to optimize this site for speed. Basically, I had to opt
 
 After testing the site on [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Flmedinatriana.github.io%2Fwebsite-optimization "Google PageSpeed"), I found out that the site was runinng below 60 fps, and consequently it got a poor review both on mobile and desktop.
 
-To resolve these issues, I optimized the images (resizing, and decreasing the quality.), inline the CSS, minimize CSS and JS and finally cache some of the images. Ultimately, All this changes, improved the rendering tremendously.
+To resolve these issues, I optimized the images (resizing, and decreasing the quality.), inline the CSS, minimize CSS and JS. Ultimately, All this changes, improved the rendering tremendously.
 
 
 ### Check List
