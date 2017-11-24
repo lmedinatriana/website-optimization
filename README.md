@@ -1,17 +1,22 @@
-## Get Started
+# Website Optimization
 
-To compare optimizations, please check dist and src folders respectively. The scr folder shows the original files to be optimized, meanwhile the dist folder shows the optimizations.
+As web applications become increasingly interactive and accessed on a variety of devices there are a variety of opportunities in which performance issues can hinder the user experience. This project presents a number of those performance issues and provides an opportunity to showcase your skills in identifying and optimizing web applications.
 
-* [Click here](https://lmedinatriana.github.io/website-optimization/ "Website Optimization Project") to view this project.
+## Getting Started
 
-
-### About
-
-For this project, I had to optimize this site for speed. Basically, I had to optimize the critical rendering path and make the page render as quickly as possible. 
+For this project, I had to optimize this site for speed. Consequently, I had to optimize the critical rendering path and make the page render as quickly as possible. 
 
 After testing the site on [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Flmedinatriana.github.io%2Fwebsite-optimization "Google PageSpeed"), I found out that the site was runinng below 60 fps, and consequently it got a poor review both on mobile and desktop.
 
 To resolve these issues, I optimized the images (resizing, and decreasing the quality.), inline the CSS, minimize CSS and JS. Ultimately, All this changes, improved the rendering tremendously.
+
+## Running Instructions
+
+1. To check the optimizations, please check dist and src folders respectively.
+2. The scr folder shows the original files to be optimized.
+3. The dist folder shows the optimizations made to the site.
+4. To run a test please go to [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Flmedinatriana.github.io%2Fwebsite-optimization "Google PageSpeed"), and paste the following [published site link](https://lmedinatriana.github.io/website-optimization/ "Website Optimization Project").
+5. Google PageSpeed Insights will analize the site and will provide tips to make the page faster.
 
 
 ### Optimizations to Landing Page
@@ -30,8 +35,14 @@ To resolve these issues, I optimized the images (resizing, and decreasing the qu
 
 Optimizations made to views/js/main.js make views/pizza.html to render with a consistent frame-rate at 60fps when scrolling.
 
-
 * Applied document.getElementById() because Web API call is faster.
 * Applied document.getElementsByClassName() because Web API call is faster.
 * Created a local variable to save document.getElementsByClassName('randomPizzaContainer') outside the loop so the DOM is not explicitly touched in every iteration.
 * Calculated the number of pizzas needed to fill the screen, based on browser window resolution.
+
+## Authors
+
+* **Udacity** - *Initial work* - [GitHub](https://github.com/udacity/frontend-nanodegree-mobile-portfolio)
+
+
+
