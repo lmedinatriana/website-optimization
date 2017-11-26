@@ -39,6 +39,8 @@ Optimizations made to views/js/main.js make views/pizza.html to render with a co
 * Applied document.getElementsByClassName() because Web API call is faster.
 * Created a local variable to save document.getElementsByClassName('randomPizzaContainer') outside the loop so the DOM is not explicitly touched in every iteration.
 * Calculated the number of pizzas needed to fill the screen, based on browser window resolution.
+* Put scrolltop out of loop because function was too expensive 
+* Added randomPizzaContainer[i].style.width = newwidth;
 
 ## Authors
 

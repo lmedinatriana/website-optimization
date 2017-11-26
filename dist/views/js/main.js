@@ -450,20 +450,21 @@ var resizePizzas = function(size) {
     return dx;
   }
 
-  // Iterates through pizza elements on the page and changes their widths
+// Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
     /** Outside the for statement/loop*/
     var randomPizzaContainer =  document.getElementsByClassName('randomPizzaContainer');
     // Other Statements;
-  	// Updating to document.getElementsByClassName() becauseWeb API call is faster.
+      // Updating to document.getElementsByClassName() becauseWeb API call is faster.
+    var dx = determineDx(randomPizzaContainer[0], size);
+
+    var newwidth = (randomPizzaContainer[0].offsetWidth + dx) + 'px';
+
     for (var i = 0; i < randomPizzaContainer.length; i++) {
       // Updating to document.getElementsByClassName() becauseWeb API call is faster.
-      var dx = determineDx(randomPizzaContainer[i], size);
-      // Updating to document.getElementsByClassName() becauseWeb API call is faster.
-      var newwidth = (randomPizzaContainer[0].offsetWidth + dx) + 'px';
+      randomPizzaContainer[i].style.width = newwidth;
     }
   }
-
   changePizzaSizes(size);
 
   // User Timing API is awesome
@@ -510,11 +511,14 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
+
+  var scrollTop;
+  var phase;
   var items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var phase = Math.sin((scrollTop / 1250) + (i % 5));
+    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    phase = Math.sin((scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
